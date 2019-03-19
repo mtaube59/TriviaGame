@@ -21,14 +21,14 @@
                 <div class="row">
                     <div class="col-md-5"></div>
                     <div class="col-md-2">
-                        <button class="btn center-block" id="button" >Start</button>
+                        <button class="btn center-block" id="first-button">Start</button>
                     </div>
                     <div class="col-md-5"></div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="second">
+    <div id="second">
         <div class="container">
             <div id="spacing" class="row">
                 <div class="col-md-12"></div>
@@ -44,7 +44,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Time Remaining:</h2>
+                    <h2 id="clock">Time Remaining:</h2>
                 </div>
             </div>
         </div>
@@ -63,22 +63,22 @@
                 <!-- <div class="col-md-2"></div> -->
                 <div class="col-md-8 d-block m-auto margin text-center">
                     <div class="form-check form-check-inline center">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        <input class="form-check-input question-1" type="radio" name="Question-1" id="inlineRadio1"
                             value="option1">
                         <label class="form-check-label" for="inlineRadio1">Katherine Janeway</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        <input class="form-check-input question-1" type="radio" name="Question-1" id="inlineRadio2"
                             value="option2">
                         <label class="form-check-label" for="inlineRadio2">James T. Kirk</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                        <input class="form-check-input question-1" type="radio" name="Question-1" id="inlineRadio3"
                             value="option3">
                         <label class="form-check-label" for="inlineRadio3">Jean-Luc Picard</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+                        <input class="form-check-input question-1" type="radio" name="Question-1" id="inlineRadio4"
                             value="option3">
                         <label class="form-check-label" for="inlineRadio4">Data</label>
                     </div>
@@ -87,45 +87,62 @@
             </div>
             <br>
             <div class="container">
-                    <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8">
-                            <h3>What Ship Did Captain Sisko Command on DS9?</h3>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <h3>What Ship Did Captain Sisko Command on DS9?</h3>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <br>
+                <div class="container">
+                    <div class="row"></div>
+                    <!-- <div class="col-md-2"></div> -->
+                    <div class="col-md-12 d-block m-auto margin text-center">
+                        <div class="form-check form-check-inline center">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio5">USS Defiant</label>
                         </div>
-                        <div class="col-md-2"></div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio6">USS Excelsior</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7"
+                                value="option3">
+                            <label class="form-check-label" for="inlineRadio7">USS Enterprise-E</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio8"
+                                value="option3">
+                            <label class="form-check-label" for="inlineRadio8">USS Voyager</label>
+                        </div>
                     </div>
-            <br>
-            <div class="container">
-                <div class="row"></div>
-                <!-- <div class="col-md-2"></div> -->
-                <div class="col-md-12 d-block m-auto margin text-center">
-                    <div class="form-check form-check-inline center">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
-                            value="option1">
-                        <label class="form-check-label" for="inlineRadio5">USS Defiant</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6"
-                            value="option2">
-                        <label class="form-check-label" for="inlineRadio6">USS Excelsior</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7"
-                            value="option3">
-                        <label class="form-check-label" for="inlineRadio7">USS Enterprise-E</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio8"
-                            value="option3">
-                        <label class="form-check-label" for="inlineRadio8">USS Voyager</label>
+                    <!-- <div class="col-md-2"></div> -->
+                </div>
+                <br><br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5"></div>
+                        <div class="col-md-2">
+                            <button type="button" id="second-button" class="btn center-block">Submit</button>
+                        </div>
+                        <div class="col-md-5"></div>
                     </div>
                 </div>
-                <!-- <div class="col-md-2"></div> -->
             </div>
-
-
         </div>
     </div>
+    <div id="third">
+        <h1>Test</h1>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/javascript/app.js"></script>
 </body>
 
 </html>

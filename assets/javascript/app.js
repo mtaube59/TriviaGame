@@ -1,32 +1,64 @@
-setTimeout(twoMinutes, 1000 * 120)
 
+window.onload = function () {
+    $("#first-button").click(hideFirst);
+    $("#second-button").click(showAnswers);
+    // $("#third").click(showThird);
+    hideSecond();
 
-$(document).ready(function () {
+    var count = 90
+    var clock;
 
-    $("#button").click(function(){
+    function hideFirst() {
         $("#first").hide();
-        console.log("clicked"); 
-    });
-     
-      
-      $("#show").click(function(){
-        $("p").show();
-      });
-// on button click first goes away and the questions with timer appear
-    $(".btn").on("click", function () {
+        $("#second").show();
+        $("#third").hide()
+        startTimer();
+    }
+    function hideSecond() {
+        // $("#first").hide();
+        $("#second").hide();
+        $("#third").hide();
 
-        $("#hide").click(function(){
-            $("p").hide();
-          });
-          
-          $("#show").click(function(){
-            $("p").show();
-          });
-    })
-//on submit or times up the third part show up showing score
-})
+    }
+    function showAnswers() {
+        $("#third").show();
+        $("#second").hide();
+
+    }
+    function startTimer() {
+        clock = setInterval(counter, 1000);
+        timeConverter(count)
 
 
-$("#button").click(function(){
-    $("#first").hide();
-  });
+    }
+    function counter() {
+        count--;
+        $("#clock").text("Time Remaining: " + timeConverter(count))
+        if (count === 0) {
+            clearInterval(clock);
+            $("#second").hide();
+            $("#third").show();
+            
+        }
+        // console.log(count);
+        console.log(timeConverter(count));
+    }
+    function timeConverter(t) {
+
+        var minutes = Math.floor(t / 60);
+        var seconds = t - (minutes * 60);
+
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+
+        if (minutes === 0) {
+            minutes = "00";
+        }
+        else if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+
+        return minutes + ":" + seconds;
+    }
+}
