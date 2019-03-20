@@ -5,8 +5,11 @@ window.onload = function () {
     // $("#third").click(showThird);
     hideSecond();
 
-    var count = 90
+    var count = 90;
     var clock;
+    var correct = 0;
+    console.log(correct);
+    var incorrect = 0;
 
     function hideFirst() {
         $("#first").hide();
@@ -23,7 +26,8 @@ window.onload = function () {
     function showAnswers() {
         $("#third").show();
         $("#second").hide();
-
+        clearInterval(clock);
+        score();
     }
     function startTimer() {
         clock = setInterval(counter, 1000);
@@ -38,7 +42,8 @@ window.onload = function () {
             clearInterval(clock);
             $("#second").hide();
             $("#third").show();
-            
+            score()
+
         }
         // console.log(count);
         console.log(timeConverter(count));
@@ -60,5 +65,102 @@ window.onload = function () {
         }
 
         return minutes + ":" + seconds;
+    }
+    $("input[type='radio']").click(function () {
+        var q1Value = $("input[name='question-1']:checked").val();
+        if (q1Value === "Picard") {
+            correct++;
+            console.log(correct);
+        }
+        else {
+            incorrect++;
+            console.log(incorrect);
+        }
+        var q2Value = $("input[name='question-2']:checked").val();
+        if (q2Value === "Defiant") {
+            correct++;
+            console.log(correct);
+        }
+        else {
+            incorrect++;
+            console.log(incorrect);
+        }
+        var q3Value = $("input[name='question-3']:checked").val();
+        if (q3Value === "Whales") {
+            correct++;
+            console.log(correct);
+        }
+        else {
+            incorrect++;
+            console.log(incorrect);
+        }
+        var q4Value = $("input[name='question-4']:checked").val();
+        if (q4Value === "Shatner") {
+            correct++;
+            console.log(correct);
+        }
+        else {
+            incorrect++;
+            console.log(incorrect);
+        }
+        var q5Value = $("input[name='question-5']:checked").val();
+        if (q5Value === "Borg") {
+            correct++;
+            console.log(correct);
+        }
+        else {
+            incorrect++;
+            console.log(incorrect);
+        }
+        var q6Value = $("input[name='question-6']:checked").val();
+        if (q6Value === "Klingon") {
+            correct++;
+            console.log(correct);
+        }
+        else {
+            incorrect++;
+            console.log(incorrect);
+        }
+        var q7Value = $("input[name='question-7']:checked").val();
+        if (q7Value === "Flute") {
+            correct++;
+            console.log(correct);
+        }
+        else {
+            incorrect++;
+            console.log(incorrect);
+        }
+        var q8Value = $("input[name='question-8']:checked").val();
+        if (q8Value === "Delta") {
+            correct++;
+            console.log(correct);
+        }
+        else {
+            incorrect++;
+            console.log(incorrect);
+        }
+        var q9Value = $("input[name='question-9']:checked").val();
+        if (q9Value === "Data") {
+            correct++;
+            console.log(correct);
+        }
+        else {
+            incorrect++;
+            console.log(incorrect);
+        }
+        var q10Value = $("input[name='question-10']:checked").val();
+        if (q10Value === "Ricardo") {
+            correct++;
+            console.log(correct);
+        }
+        else {
+            incorrect++;
+            console.log(incorrect);
+        }
+    })
+    function score(){
+
+    $("#correct").text("Correct: " + correct);
+    $("#incorrect").text("Incorrect: " + incorrect);
     }
 }

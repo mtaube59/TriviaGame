@@ -1,5 +1,5 @@
 body {
-    background-image: url(../images/space.jpg);
+    background-image: url(../images/space4.jpg);
 }
 .form-check-label {
     color: white;
@@ -44,4 +44,14 @@ h2 {
 }
 .margin {
     margin-left: 10px;
+}
+#correct {
+    color: white;
+    text-align: center;
+    font-size: 40px
+}
+#incorrect {
+    color: white;
+    text-align: center;
+    font-size: 40px;
 }
