@@ -1,7 +1,7 @@
 
 window.onload = function () {
     $("#first-button").click(hideFirst);
-    $("#second-button").click(showAnswers);
+    // $("#second-button").click(showAnswers);
     // $("#third").click(showThird);
     hideSecond();
 
@@ -21,9 +21,9 @@ window.onload = function () {
         // $("#first").hide();
         $("#second").hide();
         $("#third").hide();
-
     }
     function showAnswers() {
+        
         $("#third").show();
         $("#second").hide();
         clearInterval(clock);
@@ -42,7 +42,7 @@ window.onload = function () {
             clearInterval(clock);
             $("#second").hide();
             $("#third").show();
-            score()
+            answerChecker()
 
         }
         // console.log(count);
@@ -66,101 +66,114 @@ window.onload = function () {
 
         return minutes + ":" + seconds;
     }
-    $("input[type='radio']").click(function () {
-        var q1Value = $("input[name='question-1']:checked").val();
-        if (q1Value === "Picard") {
-            correct++;
-            console.log(correct);
-        }
-        else {
-            incorrect++;
-            console.log(incorrect);
-        }
-        var q2Value = $("input[name='question-2']:checked").val();
-        if (q2Value === "Defiant") {
-            correct++;
-            console.log(correct);
-        }
-        else {
-            incorrect++;
-            console.log(incorrect);
-        }
-        var q3Value = $("input[name='question-3']:checked").val();
-        if (q3Value === "Whales") {
-            correct++;
-            console.log(correct);
-        }
-        else {
-            incorrect++;
-            console.log(incorrect);
-        }
-        var q4Value = $("input[name='question-4']:checked").val();
-        if (q4Value === "Shatner") {
-            correct++;
-            console.log(correct);
-        }
-        else {
-            incorrect++;
-            console.log(incorrect);
-        }
-        var q5Value = $("input[name='question-5']:checked").val();
-        if (q5Value === "Borg") {
-            correct++;
-            console.log(correct);
-        }
-        else {
-            incorrect++;
-            console.log(incorrect);
-        }
-        var q6Value = $("input[name='question-6']:checked").val();
-        if (q6Value === "Klingon") {
-            correct++;
-            console.log(correct);
-        }
-        else {
-            incorrect++;
-            console.log(incorrect);
-        }
-        var q7Value = $("input[name='question-7']:checked").val();
-        if (q7Value === "Flute") {
-            correct++;
-            console.log(correct);
-        }
-        else {
-            incorrect++;
-            console.log(incorrect);
-        }
-        var q8Value = $("input[name='question-8']:checked").val();
-        if (q8Value === "Delta") {
-            correct++;
-            console.log(correct);
-        }
-        else {
-            incorrect++;
-            console.log(incorrect);
-        }
-        var q9Value = $("input[name='question-9']:checked").val();
-        if (q9Value === "Data") {
-            correct++;
-            console.log(correct);
-        }
-        else {
-            incorrect++;
-            console.log(incorrect);
-        }
-        var q10Value = $("input[name='question-10']:checked").val();
-        if (q10Value === "Ricardo") {
-            correct++;
-            console.log(correct);
-        }
-        else {
-            incorrect++;
-            console.log(incorrect);
-        }
-    })
-    function score(){
 
-    $("#correct").text("Correct: " + correct);
-    $("#incorrect").text("Incorrect: " + incorrect);
+    function answerChecker() {
+        var q1Value = $("input[name='question-1']:checked").val();
+    // console.log(q1Value);
+    if (q1Value === "Picard") {
+        correct++;
+        console.log(correct);
     }
+    else {
+        incorrect++;
+        console.log(incorrect);
+    }
+    var q2Value = $("input[name='question-2']:checked").val();
+    if (q2Value === "Defiant") {
+        correct++;
+        console.log(correct);
+    }
+    else {
+        incorrect++;
+        console.log(incorrect);
+    }
+    var q3Value = $("input[name='question-3']:checked").val();
+    if (q3Value === "Whales") {
+        correct++;
+        console.log(correct);
+    }
+    else {
+        incorrect++;
+        console.log(incorrect);
+    }
+    var q4Value = $("input[name='question-4']:checked").val();
+    if (q4Value === "Shatner") {
+        correct++;
+        console.log(correct);
+    }
+    else {
+        incorrect++;
+        console.log(incorrect);
+    }
+    var q5Value = $("input[name='question-5']:checked").val();
+    if (q5Value === "Borg") {
+        correct++;
+        console.log(correct);
+    }
+    else {
+        incorrect++;
+        console.log(incorrect);
+    }
+    var q6Value = $("input[name='question-6']:checked").val();
+    if (q6Value === "Klingon") {
+        correct++;
+        console.log(correct);
+    }
+    else {
+        incorrect++;
+        console.log(incorrect);
+    }
+    var q7Value = $("input[name='question-7']:checked").val();
+    if (q7Value === "Flute") {
+        correct++;
+        console.log(correct);
+    }
+    else {
+        incorrect++;
+        console.log(incorrect);
+    }
+    var q8Value = $("input[name='question-8']:checked").val();
+    if (q8Value === "Delta") {
+        correct++;
+        console.log(correct);
+    }
+    else {
+        incorrect++;
+        console.log(incorrect);
+    }
+    var q9Value = $("input[name='question-9']:checked").val();
+    if (q9Value === "Data") {
+        correct++;
+        console.log(correct);
+    }
+    else {
+        incorrect++;
+        console.log(incorrect);
+    }
+    var q10Value = $("input[name='question-10']:checked").val();
+    if (q10Value === "Ricardo") {
+        correct++;
+        console.log(correct);
+    }
+    else {
+        incorrect++;
+        console.log(incorrect);
+    }
+    showAnswers();
+    }
+    function score() {
+
+        $("#correct").text("Correct: " + correct);
+        $("#incorrect").text("Incorrect: " + incorrect);
+    }
+$("#second-button").click(function () {
+
+    answerChecker();
+
+
+
+
+    
+    
+})
 }
